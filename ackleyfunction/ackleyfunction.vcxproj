@@ -123,10 +123,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ackley.h" />
+    <ClInclude Include="DE.h" />
+    <ClInclude Include="PSO.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ackleyfunction.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ackley.cpp" />
+    <ClCompile Include="DE.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PSO.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
