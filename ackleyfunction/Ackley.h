@@ -6,7 +6,7 @@ using namespace std;
 class Ackley
 {
 public:
-	double AckleyProblem(const vector<double> &sol, const int &dim);
+	double AckleyProblem(const vector<double> &sol, const int &d);
 };
 
 #endif
