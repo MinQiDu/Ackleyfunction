@@ -27,10 +27,18 @@ void algo_PSO::RunALG(int _dim, int _pop_size)
 		Determination();
 	}
 
+	/*四捨五入輸出*/
+	if (abs(g_best_fit) < 1e-10) g_best_fit = 0.0;
 	cout << "Best fitness : " << g_best_fit << endl;
 	cout << "Best solution : ";
-	for (double x : g_best)
-		cout << x << " ";
+	for (int j = 0; j < dim; ++j)
+	{
+		if (abs(g_best[j]) < 1e-10)
+		{
+			g_best[j] = 0.0;
+		}
+		cout << g_best[j] << " ";
+	}
 	cout << endl;
 }
 
@@ -80,6 +88,10 @@ void algo_PSO::Transition()
 				             + a1 * r1 * (p_best[i][j] - population[i][j]) 
 				             + a2 * r2 * (g_best[j] - population[i][j]);
 			population[i][j] = population[i][j] + velocity[i][j];
+			
+			/*clamping防止超出範圍*/
+			if (population[i][j] > 32) population[i][j] = 32;
+			else if (population[i][j] < -32) population[i][j] = -32;
 		}
 	}
 }
