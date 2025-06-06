@@ -1,4 +1,4 @@
-# 我的專案名稱
+# Implement PSO & DE to solve AckleyFunction
 
 ##  特點
 - 使用 PSO 與 DE 解 Ackley function
