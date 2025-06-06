@@ -21,6 +21,9 @@ private:
 	vector<double> g_best;
 	double g_best_fit;
 
+	vector<double> fit_record;
+	int r_count;
+
 	void Init();          /*產生初始 pop_size 個 dim 維度的解存入陣列 populatio*/ /*初始化 personal_best& global_best為此初始解中 fitness 最優的，計算初始 velocity* /
 	/*while nfes < mnfes*/
 	void Transition();    /*產生新的 Velocity + 原解 = 新解，更新到population*/

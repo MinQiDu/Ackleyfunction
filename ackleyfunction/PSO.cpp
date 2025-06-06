@@ -2,6 +2,8 @@
 #include <ctime>
 #include <cstdlib> /*for rand()*/
 #include <iostream>
+#include <fstream>
+#include <string>
 
 /*產生[min, max]的隨機實數*/
 double RandDouble(double min, double max)
@@ -20,26 +22,55 @@ void algo_PSO::RunALG(int _dim, int _pop_size)
 	/*Initialization*/
 	Init(); /*generate initial solution in population*/
 
+	fit_record.resize(mnfes);
+	r_count = 0;
+
 	while (nfes < mnfes)
 	{
 		Transition();
 		Evaluation();
 		Determination();
+
+		if (nfes % 1000 == 0)
+		{
+			cout << g_best_fit << endl;
+		}
 	}
 
 	/*四捨五入輸出*/
-	if (abs(g_best_fit) < 1e-10) g_best_fit = 0.0;
+	//if (abs(g_best_fit) < 1e-10) g_best_fit = 0.0;
 	cout << "Best fitness : " << g_best_fit << endl;
 	cout << "Best solution : ";
 	for (int j = 0; j < dim; ++j)
 	{
 		if (abs(g_best[j]) < 1e-10)
 		{
-			g_best[j] = 0.0;
+			//g_best[j] = 0.0;
 		}
 		cout << g_best[j] << " ";
 	}
 	cout << endl;
+
+	/*創建文字檔保存best_fit紀錄*/
+	ofstream file("fitness_PSO_dim" + to_string(dim) + "_pop" + to_string(pop_size) + ".txt");
+	for (int i = 0; i < mnfes; ++i)
+	{
+		file << i + 1 << " " << fit_record[i] << "\n";
+	}
+	file.close();
+
+	/*創建.plt檔生成圖片*/
+	ofstream plot("plot_PSO.plt");
+	plot << "set terminal png size 800, 600\n";
+	plot << "set output 'result_Ackley_PSO_dim" << dim << "_pop" << pop_size << ".png'\n";
+	plot << "set title 'Convergence with PSO on AckleyFunction'\n";
+	plot << "set xlabel 'Evaluation times'\n";
+	plot << "set ylabel 'Fitness'\n";
+	plot << "set xrange [0:" << mnfes << "]\n";
+	plot << "set yrange [0:30]\n";
+	plot << "plot 'fitness_PSO_dim" << dim << "_pop" << pop_size << ".txt' using 1:2 with lines title 'with PSO'\n";
+	plot.close();
+
 }
 
 /*生成dim * pop_size個，整群初始 position & velocity*/
@@ -122,5 +153,7 @@ void algo_PSO::Determination()
 				g_best = population[i];
 			}
 		}
+		fit_record[r_count] = g_best_fit;
+		++r_count;
 	}
 }
