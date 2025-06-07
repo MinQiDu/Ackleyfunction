@@ -2,7 +2,7 @@
 
 ##  1. Introduction
 - Using C++
-- 使用 PSO 與 DE 解 Ackley function
+- 使用 PSO & DE 解 Ackley function
 - 支援dimension、population 數量調整
 
 ## 2. Main Function
