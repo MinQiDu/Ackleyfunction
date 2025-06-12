@@ -17,7 +17,18 @@
 mono_crash.*
 
 # Build results
-[Dd]ebug/
+# 預設忽略所有 x64
+**/x64/
+
+# 保留最外層的 x64/Debug（和 README.md 同層）
+!/x64/Debug/
+!/x64/Debug/*.txt
+!/x64/Debug/*.png
+
+# 忽略內部多層結構中的 x64（例如 ackleyfunction/ackleyfunction/x64）
+ackleyfunction/**/x64/
+
+# [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
