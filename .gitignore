@@ -23,6 +23,7 @@ mono_crash.*
 [Rr]eleases/
 x64/
 # 結果檔可被同步至GitHub
+!x64/Debug/
 !x64/Debug/*.txt
 !x64/Debug/*.png
 x86/
