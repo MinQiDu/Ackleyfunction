@@ -17,20 +17,10 @@
 mono_crash.*
 
 # Build results
-# 忽略所有x64/Debug/中的.exe .pdb .plt
-x64/[Dd]ebug/*.exe
-x64/[Dd]ebug/*.pdb
-x64/[Dd]ebug/*.plt
-# 忽略子資料夾中的x64
-ackleyfunction/**/x64/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-# x64/
-# 結果檔可被同步至GitHub
-# !x64/Debug/
-# !x64/Debug/*.txt
-# !x64/Debug/*.png
+x64/
 x86/
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
