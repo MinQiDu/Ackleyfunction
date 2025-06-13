@@ -61,7 +61,7 @@
 ## 5. 執行方式     
 ### `------------編譯------------` 
 #### `VisualStudio`
-1. 開啟 Visual Studio 專案 `OneMax.sln`
+1. 開啟 Visual Studio 專案 `ackleyfunction.sln`
 2. 按下 `Ctrl + F5` 開始編譯
 
 #### `VSCode`
