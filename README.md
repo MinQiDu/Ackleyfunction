@@ -68,7 +68,7 @@
 1. 在 Windows cmd 或 PowerShell 中
 2. 先到正確資料夾路徑
 3. 輸入：   
-g++ main.cpp deception.cpp SimulatedAnnealing.cpp -o deception.exe  
+g++ main.cpp DE.cpp PSO.cpp Ackley.cpp -o ackleyfunction.exe  
 
 ### `------------執行------------`
 1. 在 Windows cmd 或 PowerShell 中
