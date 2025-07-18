@@ -75,6 +75,9 @@ g++ main.cpp DE.cpp PSO.cpp Ackley.cpp -o ackleyfunction.exe
 2. 先到正確資料夾路徑
 3. 輸入：   
 .\ackleyfunction.exe `dim = 2 or 10` `pop_size = 100` `cr = 0.8` `dr = 0.8` 
+出現 :
+Choose Algorithm ( PSO / DE )
+輸入演算法 ( PSO or DE )
 
 ##  6. 檔案結構
 - ackleyfunction/  
