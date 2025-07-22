@@ -5,16 +5,15 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <random>    /* for random device & mt19937 */
 #include <cmath>     /* for sqrt */
-using namespace std;
 
-/* Constructor 初始化 random engine */
+/* Constructor 初始化亂數引擎 */
 algo_JADE::algo_JADE() 
 	: gen(rd()) /* 用 rd 初始化 gen（記住這只能放在初始化列表中） */
 { 
 }
 
+/* 執行演算法 */
 void algo_JADE::RunALG(const int& _dim, const int& _pop_size, const double& _CR, const double& _F, const double& _c, const double& _p)
 {
 	dim = _dim;
@@ -49,7 +48,7 @@ void algo_JADE::RunALG(const int& _dim, const int& _pop_size, const double& _CR,
 	cout << endl;	
 
 	/* 創建文字檔保存best_fit紀錄 */
-	ofstream file("fitness_JADE_dim" + to_string(dim) + "_pop" + to_string(pop_size) + ".txt");
+	ofstream file("fitness_JADE_dim" + to_string(dim) + "_pop" + to_string(pop_size) + "_c" + to_string(int(c*100)) + "_p" + to_string(int(p*100)) + ".txt");
 	for (int i = 0; i < mnfes; ++i)
 	{
 		file << i + 1 << " " << fit_record[i] << "\n";
@@ -59,20 +58,20 @@ void algo_JADE::RunALG(const int& _dim, const int& _pop_size, const double& _CR,
 	/* 創建.plt檔生成圖片 */
 	ofstream plot("plot_JADE.plt");
 	plot << "set terminal png size 800, 600\n";
-	plot << "set output 'result_Ackley_JADE_dim" << dim << "_pop" << pop_size << ".png'\n";
+	plot << "set output 'result_Ackley_JADE_dim" << dim << "_pop" << pop_size << "_c" << c*100 << "_p" << p*100 << ".png'\n";
 	plot << "set title 'Convergence with JADE on AckleyFunction'\n";
 	plot << "set xlabel 'Evaluation times'\n";
 	plot << "set ylabel 'Fitness'\n";
 	plot << "set xrange[0:" << mnfes << "]\n";
 	plot << "set yrange[0:30]\n";
-	plot << "plot 'fitness_JADE_dim" << dim << "_pop" << pop_size << ".txt' using 1:2 with lines title 'with DE'\n";
+	plot << "plot 'fitness_JADE_dim" << dim << "_pop" << pop_size << "_c" << c*100 << "_p" << p*100 << ".txt' using 1:2 with lines title 'with JADE'\n";
 	plot.close();
 }
 
 /* 產生初始解 */
 void algo_JADE::Init()
 {
-	uniform_real_distribution<double> dist_real(-32.0, 32.0); /* -32.0 ~32.0 實數均勻分布 for 生成初始解 */
+	uniform_real_distribution<double> dist_init(-32.0, 32.0); /* -32.0 ~32.0 實數均勻分布 for 生成初始解 */
 
 	pop.clear();
 	donor_pop.clear();
@@ -92,7 +91,7 @@ void algo_JADE::Init()
 
 		for (int j = 0; j < dim; ++j)
 		{
-			ind[j] = dist_real(gen);
+			ind[j] = dist_init(gen);
 		}
 		pop.push_back(ind);                        /* 初始化原解 */
 		donor_pop.push_back(ind);                  /* 初始化donor解 */

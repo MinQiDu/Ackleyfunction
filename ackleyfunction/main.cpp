@@ -39,13 +39,13 @@ int main(int argc, char *argv[])
 			cout << "algo_type = " << algo_type << endl;
 			canrun = 1;
 
-			string c, p;
-			cout << "Please enter the value of adaptation rate c =" << endl;
-			getline(cin, c);
-			cout << "Please enter the value of the top % pop chosen for pbest =" << endl;
-			getline(cin, p);
-			double c = stod(c);
-			double p = stod(p);
+			string _c, _p;
+			cout << "Please enter the value of adaptation rate c =";
+			getline(cin, _c);
+			cout << "Please enter the value of the top % pop chosen for pbest =";
+			getline(cin, _p);
+			double c = stod(_c);
+			double p = stod(_p);
 
 			algo_JADE algo;
 			algo.RunALG(dim, pop_size, CR, F, c, p);

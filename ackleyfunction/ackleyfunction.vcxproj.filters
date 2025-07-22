@@ -49,5 +49,8 @@
     <ClCompile Include="Ackley.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="JADE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

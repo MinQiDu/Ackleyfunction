@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="Ackley.cpp" />
     <ClCompile Include="DE.cpp" />
+    <ClCompile Include="JADE.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PSO.cpp" />
   </ItemGroup>
