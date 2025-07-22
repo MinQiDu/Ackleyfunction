@@ -27,6 +27,9 @@
     <ClInclude Include="DE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="JADE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ackleyfunction.rc">

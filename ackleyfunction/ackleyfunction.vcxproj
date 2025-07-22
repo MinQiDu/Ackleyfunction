@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClInclude Include="Ackley.h" />
     <ClInclude Include="DE.h" />
+    <ClInclude Include="JADE.h" />
     <ClInclude Include="PSO.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
