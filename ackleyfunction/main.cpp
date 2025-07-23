@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 	{
 		cout << "Choose Algorithm ( PSO / DE / JADE)" << endl;
 		getline(cin, algo_type);
+		transform(algo_type.begin(), algo_type.end(), algo_type.begin(), toupper); /* 輸入大小寫都可以，最後切回大寫 */
 
 		if (algo_type == "PSO")
 		{
@@ -40,9 +41,9 @@ int main(int argc, char *argv[])
 			canrun = 1;
 
 			string _c, _p;
-			cout << "Please enter the value of adaptation rate c =";
+			cout << "Please enter the value of adaptation rate c = ";
 			getline(cin, _c);
-			cout << "Please enter the value of the top % pop chosen for pbest =";
+			cout << "Please enter the value of the top % pop chosen for pbest = ";
 			getline(cin, _p);
 			double c = stod(_c);
 			double p = stod(_p);

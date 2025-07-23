@@ -58,7 +58,7 @@ void algo_DE::RunALG(const int& _dim, const int& _pop_size, const double& _CR, c
 	plot << "set title 'Convergence with DE on AckleyFunction'\n";
 	plot << "set xlabel 'Evaluation times'\n";
 	plot << "set ylabel 'Fitness'\n";
-	plot << "set xrange[0:" << mnfes << "]\n";
+	plot << "set xrange[0:" << dim * 2000 << "]\n";
 	plot << "set yrange[0:30]\n";
 	plot << "plot 'fitness_DE_dim" << dim << "_pop" << pop_size << "_CR" << CR*10 << "_F" << F*10 << ".txt' using 1:2 with lines title 'with DE'\n";
 	plot.close();

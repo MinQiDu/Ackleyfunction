@@ -66,7 +66,7 @@ void algo_PSO::RunALG(int _dim, int _pop_size)
 	plot << "set title 'Convergence with PSO on AckleyFunction'\n";
 	plot << "set xlabel 'Evaluation times'\n";
 	plot << "set ylabel 'Fitness'\n";
-	plot << "set xrange [0:" << mnfes << "]\n";
+	plot << "set xrange [0:" << dim * 2000 << "]\n";
 	plot << "set yrange [0:30]\n";
 	plot << "plot 'fitness_PSO_dim" << dim << "_pop" << pop_size << ".txt' using 1:2 with lines title 'with PSO'\n";
 	plot.close();

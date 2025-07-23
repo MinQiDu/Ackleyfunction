@@ -62,7 +62,7 @@ void algo_JADE::RunALG(const int& _dim, const int& _pop_size, const double& _CR,
 	plot << "set title 'Convergence with JADE on AckleyFunction'\n";
 	plot << "set xlabel 'Evaluation times'\n";
 	plot << "set ylabel 'Fitness'\n";
-	plot << "set xrange[0:" << mnfes << "]\n";
+	plot << "set xrange[0:" << dim * 2000 << "]\n";
 	plot << "set yrange[0:30]\n";
 	plot << "plot 'fitness_JADE_dim" << dim << "_pop" << pop_size << "_c" << c*100 << "_p" << p*100 << ".txt' using 1:2 with lines title 'with JADE'\n";
 	plot.close();
