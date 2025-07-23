@@ -66,7 +66,7 @@ const double& F, const double& _c, const double& _p)
 
 ## 3. Input
 ### Command_line arguments :
-- 解空間維度 | dim = 2 or 10
+- 解空間維度 | dim = 2 or 10 or 30 (觀察高維度)
 - 單次生成解次數 | pop_size = 100
 - (for DE & JADE) Cross_rate 交叉生成率 | CR = 0.8   
 /*JADE預設CR = 0.5*/
