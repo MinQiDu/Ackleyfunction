@@ -125,16 +125,49 @@ Please enter the value of the top % pop chosen for pbest = 輸入p值
  `JADE.cpp` / `JADE.h`    
  `Ackley.cpp` / `Ackley.h`
 
- ## 7. 實驗結果 & 觀察
- #### The following figure compares convergence of PSO, DE, and JADE on Ackley function (dim = 30, pop = 100) :
+ - results/    
+ output results (.png, .txt)
+
+ - docs/        
+ algorithm notes (.md)
+
+ - README.md/       
+ this file
+
+ ## 7. 實驗結果
+#### The following figure compares convergence of PSO, DE, and JADE on Ackley function (dim = 2, pop = 100) :
+<p align="center">
+  <img src="results/dim2/result_Ackley_DE_dim2_pop100_CR9_F5.png" width="30%"/>
+  <img src="results/dim2/result_Ackley_PSO_dim2_pop100.png" width="30%"/>
+  <img src="results/dim2/result_Ackley_JADE_dim2_pop100_c20_p20.png" width="30%"/>
+</p>
+
+#### The following figure compares convergence of PSO, DE, and JADE on Ackley function (dim = 30, pop = 100) :
 <p align="center">
   <img src="results/dim30/result_Ackley_DE_dim30_pop100_CR9_F5.png" width="30%"/>
   <img src="results/dim30/result_Ackley_PSO_dim30_pop100.png" width="30%"/>
   <img src="results/dim30/result_Ackley_JADE_dim30_pop100_c20_p20.png" width="30%"/>
 </p>
 
-**Observation** :    
-JADE converges faster and avoids premature convergence compared to PSO and DE in high-dimensional cases.
+## 8. Observation
+- JADE converges faster and avoids premature convergence compared to PSO and DE in high-dimensional cases
+- JADE significantly improves convergence via adaptive control
+- See docs/JADE_Algo_Note.md for deeper observations
 
-## 8. 演算法筆記
+## 9. Key Features
+- Object-Oriented Implementation
+- DE: DE/rand/1/bin
+- JADE: DE/current-to-pbest/1
+- Adaptive parameter learning (mCR, mF)
+- CLI parameter tuning
+- Output visualization via gnuplot
+
+## 10. Skills Showcased
+- C++ modular programming
+- Algorithm design and benchmarking
+- Visualization automation
+- Metaheuristic analysis
+- Parameter sensitivity analysis
+
+## 11. 相關連結
 [JADE_Algo_Note](JADE_Algo_Note.pdf)
