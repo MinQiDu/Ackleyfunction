@@ -70,9 +70,9 @@ const double& F, const double& _c, const double& _p)
 ### Command_line arguments :
 - 解空間維度 | dim = 2 or 10 or 30 (觀察高維度)
 - 單次生成解次數 | pop_size = 100
-- (for DE & JADE) Cross_rate 交叉生成率 | CR = 0.8   
+- (for DE & JADE) Cross_rate 交叉生成率 | CR = 0.9   
 /*JADE預設CR = 0.5*/
-- (for DE & JADE) Donor_rate 生成donor解比重 | F = 0.8   
+- (for DE & JADE) Donor_rate 生成donor解比重 | F = 0.5   
 /*JADE預設F = 0.5*/
 - (for JADE) Adaptation rate 更新參數的比重 | c = 0.05 ~ 0.2
 - (for JADE) Top p% pop 隨機選出 x_pbest | p = 0.05 ~ 0.2
@@ -114,7 +114,7 @@ g++ main.cpp DE.cpp JADE.cpp PSO.cpp Ackley.cpp -o ackleyfunction.exe
 Choose Algorithm ( PSO / DE / JADE)   
 輸入演算法 ( PSO or DE or JADE)   
 選JADE接著出現:   
-Please enter the value of adaptation rate c = 輸入C值   
+Please enter the value of adaptation rate c = 輸入C值  
 Please enter the value of the top % pop chosen for pbest = 輸入p值
 
 ##  6. 檔案結構
