@@ -170,4 +170,4 @@ Please enter the value of the top % pop chosen for pbest = 輸入p值
 - Parameter sensitivity analysis
 
 ## 11. 相關連結
-[JADE_Algo_Note](JADE_Algo_Note.pdf)
+[JADE_Algo_Note](docs/JADE_Algo_Note.md)
