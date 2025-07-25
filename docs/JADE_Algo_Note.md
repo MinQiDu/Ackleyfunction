@@ -4,13 +4,13 @@
 **專案連結 :  [GitHub](https://github.com/MinQiDu/Voronoi_Diagram_Visualizer.git)  / [本地資料夾](C:\Users\user\Documents\MyCode\VisualStudio\voronoi\voronoi\voronoi.cpp) / [原始碼](C:\Users\user\Documents\MyCode\VisualStudio\voronoi\voronoi\voronoi.cpp) / [README.md](C:\Users\user\Documents\MyCode\VisualStudio\voronoi\README.md) **
 
 ## **( 一 ) 定義**
-![](IMG_1191.jpeg)
-![](IMG_1184.jpeg)
+![](attachments/IMG_1191.jpeg)
+![](attachments/IMG_1184.jpeg)
 
 ---
 
 ## **( 二 ) 結構**
-![](JADE_pseudocode.png)
+![](attachments/JADE_pseudocode.png)
 
 ---
 
@@ -22,7 +22,7 @@
 |---|---|---|
 |高斯分佈|取值結果會接近平均值 -> 較細緻|CR[i]|
 |柯西分佈|較大機會得到遠離平均值的值 -> 多樣性高，探索性高|F[i]|
-![](zGTLU.png)
+![](attachments/zGTLU.png)
 
 ---
 
