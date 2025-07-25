@@ -2,8 +2,10 @@
 
 ##  1. Introduction
 - Using C++
-- 使用 PSO 和 DE 和 JADE 解 Ackley function
-- 支援dimension、population 數量調整
+- Metaheuristic algorithms: PSO, DE, JADE (adaptive DE)
+- Benchmark: Ackley function (dim = 2, 10, 30)
+- Visualization: gnuplot
+- 支援dimension、population 等參數值調整
 
 ## 2. Main Function
 ### `ParticalSwarmOptimization (PSO)`
@@ -122,3 +124,17 @@ Please enter the value of the top % pop chosen for pbest = 輸入p值
  `DE.cpp` / `DE.h`   
  `JADE.cpp` / `JADE.h`    
  `Ackley.cpp` / `Ackley.h`
+
+ ## 7. 實驗結果 & 觀察
+ #### The following figure compares convergence of PSO, DE, and JADE on Ackley function (dim = 30, pop = 100) :
+<p align="center">
+  <img src="results/dim30/result_Ackley_DE_dim30_pop100_CR9_F5.png" width="30%"/>
+  <img src="results/dim30/result_Ackley_PSO_dim30_pop100.png" width="30%"/>
+  <img src="results/dim30/result_Ackley_JADE_dim30_pop100_c20_p20.png" width="30%"/>
+</p>
+
+**Observation** :    
+JADE converges faster and avoids premature convergence compared to PSO and DE in high-dimensional cases.
+
+## 8. 演算法筆記
+[JADE_Algo_Note](JADE_Algo_Note.pdf)
