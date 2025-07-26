@@ -99,11 +99,11 @@
 
 ### Compile
 
-#### Using Visual Studio
+#### Visual Studio
 1. Open the project `ackleyfunction.sln`
 2. Press `Ctrl + F5` to build
 
-#### Using VSCode
+#### VSCode
 1. Open PowerShell or Windows CMD
 2. Navigate to the correct folder
 3. Compile with:
@@ -127,6 +127,19 @@ If you select JADE, you will be further prompted:
 Please enter the value of adaptation rate c =
 Please enter the value of the top % pop chosen for pbest =
 ```
+
+### Plot Results
+1. Install gnuplot
+2. Open CMD or PowerShell
+3. Run with:
+
+```bash
+gnuplot plot_PSO.plt
+gnuplot plot_DE.plt
+gnuplot plot_JADE.plt
+```
+
+Output PNGs will appear in the working directory
 
 ## ( VI ) File Structure
 
