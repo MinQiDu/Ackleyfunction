@@ -76,7 +76,7 @@
 - **c**: Adaptation rate (for JADE, range = 0.05 ~ 0.2)
 - **p**: Top p% used to select x_pbest (for JADE, range = 0.05 ~ 0.2)
 
-## ( IV ) Output Files
+## ( IV ) Output
 
 ### `PSO`
 - `fitness_PSO_dim(2 or 10)_pop100.txt`
