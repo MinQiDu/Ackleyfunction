@@ -1,11 +1,11 @@
 # Implement PSO, DE, and JADE to Solve the Ackley Function
 
 ## ( I ) Introduction
-- Language: C++
-- Metaheuristic algorithms: PSO, DE, and JADE (adaptive DE)
-- Benchmark function: Ackley function (dim = 2, 10, 30)
-- Visualization: gnuplot
-- Supports configurable parameters: dimension, population size, etc.
+- **Programming language:** C++
+- **Metaheuristic algorithms:** PSO, DE, and JADE (adaptive DE)
+- **Benchmark function:** Ackley function (dim = 2, 10, 30)
+- **Visualization:** gnuplot
+- **Supports configurable parameters:** dimension, population size, etc.
 
 ## ( II ) Main Functionality
 
