@@ -69,12 +69,14 @@
 ## ( III ) Input
 
 ### Command-line arguments:
-- **dim**: Problem dimensionality (2 / 10 / 30)
-- **pop_size**: Population size (e.g., 100)
-- **CR**: Crossover rate (for DE & JADE, default = 0.9 for DE, 0.5 for JADE)
-- **F**: Donor rate / scaling factor (for DE & JADE, default = 0.5 for DE, 0.5 for JADE)
-- **c**: Adaptation rate (for JADE, range = 0.05 ~ 0.2)
-- **p**: Top p% used to select x_pbest (for JADE, range = 0.05 ~ 0.2)
+- **dim:** Problem dimensionality (2 / 10 / 30)
+- **pop_size:** Population size (e.g., 100)
+- For DE & JADE only:
+  - **CR:** Crossover rate (for DE & JADE, default = 0.9 for DE, 0.5 for JADE)
+  - **F:** Donor rate / scaling factor (for DE & JADE, default = 0.5 for DE, 0.5 for JADE)
+- For JADE only:  
+  - **c:** Adaptation rate (for JADE, range = 0.05 ~ 0.2)
+  - **p:** Top p% used to select x_pbest (for JADE, range = 0.05 ~ 0.2)
 
 ## ( IV ) Output
 
