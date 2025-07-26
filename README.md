@@ -97,7 +97,7 @@
 - `plot_JADE.plt`
 - `result_Ackley_JADE_dim(2 or 10)_pop100_c20_p20.png`
 
-## ( V ) How to Compile and Run
+## ( V ) How to Compile, Run and Result Visualization
 
 ### Compile
 
@@ -130,7 +130,7 @@ Please enter the value of adaptation rate c =
 Please enter the value of the top % pop chosen for pbest =
 ```
 
-### Plot Results
+### Result Visualization
 1. Install gnuplot
 2. Open CMD or PowerShell
 3. Run with:
