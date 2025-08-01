@@ -18,7 +18,7 @@ void algo_JADE::RunALG(const int& _dim, const int& _pop_size, const double& _CR,
 {
 	dim = _dim;
 	pop_size = _pop_size;
-	mnfes = dim * 10000;
+	mnfes = dim * 2000;
 	nfes = 0;
 	mCR = _CR;
 	mF = _F;
@@ -85,24 +85,32 @@ void algo_JADE::Init()
 	fit.resize(pop_size);
 	current_fit.resize(pop_size);
 
+	pop.reserve(pop_size);
+	donor_pop.reserve(pop_size);
+	current_pop.reserve(pop_size);
+
+	Ackley ackley; // Construct once
+
 	for (int i = 0; i < pop_size; ++i)
 	{
 		vector<double> ind(dim);
-
 		for (int j = 0; j < dim; ++j)
 		{
 			ind[j] = dist_init(gen);
 		}
-		pop.push_back(ind);                        /* 初始化原解 */
-		donor_pop.push_back(ind);                  /* 初始化donor解 */
-		current_pop.push_back(ind);                /* 初始化current解 */
-		fit[i] = Ackley().AckleyProblem(pop[i]);   /* 初始化原解fit */
-		current_fit[i] = fit[i];                   /* 初始化current解fitness */
+		pop.emplace_back(ind);/* 初始化原解 */
+		donor_pop.emplace_back(ind);/* 初始化donor解 */
+		current_pop.emplace_back(ind);/* 初始化current解 */
+
+		double fitness = ackley.AckleyProblem(ind);/* 初始化原解fit */
+		fit[i] = fitness;
+		current_fit[i] = fitness;/* 初始化current解fitness */
 	}
+
 	auto best_it = min_element(fit.begin(), fit.end());
 	int best_idx = distance(fit.begin(), best_it);
-	best_fit = *best_it;                           /* 初始化best_fit */
-	best_sol = pop[best_idx];                      /* 初始化best_sol */
+	best_fit = *best_it;/* 初始化best_fit */
+	best_sol = pop[best_idx];/* 初始化best_sol */
 }
 
 /*產生donor解*/
